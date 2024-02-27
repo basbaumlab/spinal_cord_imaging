@@ -1,6 +1,6 @@
 # Long-term optical imaging of the spinal cord in awake, behaving animals: design files and microCT data
 
-Design files, microCT data, and documentation related to spinal cord imaging methods developed in Basbaum Lab by [Biafra Ahanonu]() and Andrew Crowther.
+Design files, microCT data, and documentation related to spinal cord imaging methods developed in the Basbaum Lab by [Biafra Ahanonu](https://bahanonu.com/) and [Andrew Crowther](https://profiles.ucsf.edu/andrew.crowther).
 - Preprint: Ahanonu and Crowther, _et al_. (2023). _Long-term optical imaging of the spinal cord in awake, behaving animals_. bioRxiv (https://www.biorxiv.org/content/10.1101/2023.05.22.541477v1.full). Abstract below.
 - See code for imaging processing at https://github.com/bahanonu/ciatah.
 
