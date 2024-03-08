@@ -11,6 +11,7 @@ Design files, microCT data, and documentation related to spinal cord imaging met
 ## Contents
 
 - [3D murine skeletal models (microCT)](#3d-murine-skeletal-models-microct)
+- [Running wheel and rotary encoder](#running-wheel-and-rotary-encoder)
 - [Spinal chamber design files](#spinal-chamber-design-files)
 - [3D printing](#3d-printing)
 - [CAD software](#cad-software)
@@ -25,18 +26,34 @@ Made in USA.<br>
 <img src="https://user-images.githubusercontent.com/5241605/71493809-322a5400-27ff-11ea-9b2d-52ff20b5f332.png" align="center" title="USA" alt="USA" width="auto" height="50">
 
 ## 3D murine skeletal models (microCT)
-![2023_02_27_test03-3](https://github.com/bahanonu/ciatah/assets/5241605/fa1c9717-99ad-4b6e-bc47-0346de7ce275)
+![image](https://github.com/bahanonu/ciatah/assets/5241605/fa1c9717-99ad-4b6e-bc47-0346de7ce275)
 
-The repository includes a 3D model of an entire mouse (C57/BL6 from JAX) skeleton to help facilitate designing of surgical components and other analysis of the spinal cord and brain. This model is displayed above with spinal chamber components. Files can be found in the directory below. 
+The repository includes a 3D model of an entire mouse (C57/BL6 from JAX) skeleton to help facilitate designing of surgical components and other analysis of the spinal cord and brain. This model is displayed above with spinal chamber components. Files can be found in the directory below.
 
 - STL: `data\microCT\microCT_mouse_fullbody_scan_processed.stl`
 - TIFF: `data\microCT\microCT_mouse_fullbody_scan_processed.stl`
 
-We recommend setting coordinate origin points to bregma or lambda once the STL files are loaded in the CAD model of choice to facilitate easier placement of components in line with stereotaxic coordinates.
+We recommend setting coordinate origin points to bregma or lambda once the STL files are loaded in the CAD software of choice to facilitate easier placement of components in line with stereotaxic coordinates. Also, use the bregma-lambda distance to confirm that the units are correct after import, else scale the model to achieve the correct size.
+
+## Running wheel and rotary encoder
+![image](https://github.com/basbaumlab/spinal_cord_imaging/assets/5241605/3f8b98aa-7a7c-434e-9984-c1209bb30165)
+
+The running wheel design allows delivery of sensory stimuli to animals' paws while they are awake (left panel above). We use an infrared (IR) transmitting acrylic sheet that allows use of IR lights and cameras to monitor the animal while keeping the surface visibly black. This has multiple advantages over visibly clear acrylic for animal behavior and stimulus delivery. We then laser cut the above design (e.g. using a `ULS V3.50 Laser Cutter`); the different colors for the hexagons indicate the relative order in which they will be cut (middle panel above), this allows more even heat dissipation during the run and reduces the chance the acrylic will become warped. We use a 3D printed piece to connect the rotary encoder to the running wheel (right panel above).
+
+- Design files
+  - Running wheel (Illustrator): `design_files\running_wheel\runningWheel.ai`.
+    - Remember to change the weight of the lines to match what is required for the laser cutter being used.
+    - Layout based on aluminum sheet used for freely moving imaging and behavior: https://www.mcmaster.com/92725T51/.
+  - 3D printed rotary encoder to running wheel: `design_files\running_wheel\encoder_to_wheel_attach.stp`.
+- Materials and devices
+  - Infrared transmitting acrylic: https://www.eplastics.com/ACRY31430-125PM11-555X11-850.
+  - Rotary encoder: https://www.amazon.com/Signswise-Incremental-Optical-Encoder-Quadrature/dp/B00Y9KDDCY.
+  - Brass insert for 1/4-20 screws: https://www.mcmaster.com/92395A116/.
+    - This can heat set into the 3D printed part that connects to the rotary encoder.
 
 ## Spinal chamber design files
 
-The STEP and STL files can be used for laser cutting (after conversion, e.g. to DXF file), 3D printing, and for planning surgeries using CAD software.
+The STEP and STL files can be used for laser cutting (after conversion, e.g. to [DXF file](https://en.wikipedia.org/wiki/AutoCAD_DXF)), 3D printing, and for planning surgeries using CAD software.
 
 ### Side bars and stabilizing plate
 ![image](https://github.com/basbaumlab/spinal_cord_imaging/assets/5241605/a1c272cb-647a-485c-bfa3-e9be856ba39b)
@@ -70,7 +87,7 @@ Laser cutting is a cost-effective method for making many of the components for t
 ## 3D printing
 ![image](https://github.com/basbaumlab/spinal_cord_imaging/assets/5241605/ad7e1cc7-d92a-4736-9400-a56065f26dc8)
 
-There are slightly different design considerations for 3D printing if need non-metallic materials for compatibility with microCT, MRI, or other modalities. We found biocompatible 3D printed materials can work and are compatible with microCT imaging (see above or below microCT slices and 3D reconstruction). However, these spinal chamber components often need to be thicker due to the lower strength of the materials compared to steel.
+There are slightly different design considerations for 3D printing if non-metallic materials are needed for compatibility with microCT, MRI, or other imaging modalities. We found that biocompatible 3D printed materials can work and are compatible with microCT imaging (see above or below microCT slices and 3D reconstruction). However, these spinal chamber components often need to be thicker due to the lower strength of the materials compared to steel or other metals.
 
 - `Surgical Guide` - https://dental.formlabs.com/store/materials/surgical-guide-resin/
 - `BioMed Clear` - https://formlabs.com/store/materials/biomed-clear-resin/
@@ -102,8 +119,7 @@ The spinal cord can have rapid and substantial (hundreds of micrometers) movemen
 <div style="font-size: 0.8em;">Imaging a large spinal cord field is subject to several types of motion artifacts.</div><br><br>
 
 ![image](https://github.com/basbaumlab/spinal_cord_imaging/assets/5241605/c1ab9d49-dd8e-4df5-a5da-696ae014cf63)
-<div style="font-size: 0.8em;">Modular motion correction pipeline that addresses each of the issues outlined in a: features identified using deep learning followed by control point and rigid registration (large displacement motion correction method, LD-MCM), deformation correction using displacement fields followed by rigid registration, and manual or automated cross-session motion correction (CS-MCM).</div><br><br>
-
+<div style="font-size: 0.8em;">Modular motion correction pipeline that addresses each of the issues outlined in a: features identified using deep learning followed by control point and rigid registration (large displacement motion correction method, LD-MCM), deformation correction using displacement fields followed by rigid registration, and manual or automated cross-session motion correction (CS-MCM).</div>
 
 ## Questions?
 
