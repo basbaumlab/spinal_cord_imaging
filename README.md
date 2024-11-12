@@ -1,10 +1,11 @@
-# Long-term optical imaging of the spinal cord in awake, behaving animals: design files and microCT data
+# Long-term optical imaging of the spinal cord in awake behaving mice
 
 Design files, microCT data, and documentation related to spinal cord imaging methods developed in the Basbaum Lab by [Biafra Ahanonu](https://bahanonu.com/) and [Andrew Crowther](https://profiles.ucsf.edu/andrew.crowther).
-- Preprint: Ahanonu and Crowther, _et al_. (2023). _Long-term optical imaging of the spinal cord in awake, behaving animals_. bioRxiv (https://www.biorxiv.org/content/10.1101/2023.05.22.541477v1.full). Abstract below.
+<!-- - Preprint: Ahanonu*, Crowther*, _et al_. (2023). _Long-term optical imaging of the spinal cord in awake, behaving animals_. bioRxiv (https://www.biorxiv.org/content/10.1101/2023.05.22.541477v1.full). Abstract below. -->
+- B. Ahanonu*, A. Crowther*, A. Kania, M. Rosa-Casillas, A.I. Basbaum. (2024). Long-term optical imaging of the spinal cord in awake behaving mice. _Nature Methods_. https://doi.org/10.1038/s41592-024-02476-3 (https://www.nature.com/articles/s41592-024-02476-3)
 - See code for imaging processing at https://github.com/bahanonu/ciatah.
 
-> Advances in optical imaging approaches and fluorescent biosensors have enabled an understanding of the spatiotemporal and long-term neural dynamics in the brain of awake animals. However, methodological difficulties and the persistence of post-laminectomy fibrosis have greatly limited similar advances in the spinal cord. To overcome these technical obstacles, we combined in vivo application of fluoropolymer membranes that inhibit fibrosis; a redesigned, cost-effective implantable spinal imaging chamber; and improved motion correction methods that together permit imaging of the spinal cord in awake, behaving mice, for months to over a year. We also demonstrated a robust ability to monitor axons, identify a spinal cord somatotopic map, perform months-long freely moving imaging, conduct Ca2+ imaging of neural dynamics in behaving animals responding to pain-provoking stimuli, and observe persistent microglial changes after nerve injury. The ability to couple neural activity and behavior at the spinal cord level will drive insights not previously possible at a key location for somatosensory transmission to the brain.
+> Advances in optical imaging and fluorescent biosensors enable study of the spatiotemporal and long-term neural dynamics in the brain of awake animals. However, methodological difficulties and fibrosis limit similar advances in the spinal cord. Here, to overcome these obstacles, we combined in vivo application of fluoropolymer membranes that inhibit fibrosis, a redesigned implantable spinal imaging chamber and improved motion correction methods that together permit imaging of the spinal cord in awake behaving mice, for months to over a year. We demonstrated a robust ability to monitor axons, identified a spinal cord somatotopic map, performed months-long imaging in freely moving mice, conducted Ca2+ imaging of neural dynamics in behaving mice responding to pain-provoking stimuli and observed persistent microglial changes after nerve injury. The ability to couple in vivo imaging and behavior at the spinal cord level will drive insights not previously possible at a key location for somatosensory transmission to the brain.
 
 ![image](https://github.com/basbaumlab/spinal_cord_imaging/assets/5241605/b3abd949-ef4e-4de2-8f9a-ba58e13d1ce8)
 
@@ -135,17 +136,31 @@ This project is licensed under the terms of the GPLv3 license. See LICENSE file 
 
 ## References
 
-Please cite the [Ahanonu*, Crowther*, 2023](https://doi.org/10.1101/2023.05.22.541477) preprint on spinal cord imaging if you use related methods or procedures.
+Please cite the [Ahanonu*, Crowther*, 2024](https://doi.org/10.1038/s41592-024-02476-3) _Nature Methods_ paper on spinal cord imaging if you use related methods or procedures.
 
 ```bibtex
-@article{ahanonu2023long,
+@article{Ahanonu2024-wq,
+  title     = "Long-term optical imaging of the spinal cord in awake behaving
+               mice",
+  author    = "Ahanonu, Biafra and Crowther, Andrew and Kania, Artur and
+               Rosa-Casillas, Mariela and Basbaum, Allan I",
+  journal   = "Nat. Methods",
+  publisher = "Springer Science and Business Media LLC",
+  pages     = "1--13",
+  month     =  nov,
+  year      =  2024,
+  language  = "en"
+}
+
+```
+<!-- Please cite the [Ahanonu*, Crowther*, 2023](https://doi.org/10.1101/2023.05.22.541477) preprint on spinal cord imaging if you use related methods or procedures. -->
+<!-- @article{ahanonu2023long,
   title={Long-term optical imaging of the spinal cord in awake, behaving animals},
   author={Ahanonu, Biafra and Crowther, Andrew and Kania, Artur and Casillas, Mariela Rosa and Basbaum, Allan},
   journal={bioRxiv},
   pages={2023--05},
   year={2023},
   publisher={Cold Spring Harbor Laboratory}
-}
-```
+} -->
 
 Please see https://bahanonu.github.io/ciatah/references/ for additional references depending on processing steps undertaken.
